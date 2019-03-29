@@ -1,2 +1,18 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section>
+    {{!-- this is a loop for handlebars --}}
+    <h2>My 3 Favourite Songs</h2>
+    <div  class="small-12 medium-12 large-12" id="song">
+    {{#each songs}}
+    <div class="songBox">
+        <div class="songDetails">
+        <a href="/{{song_name}}">
+        <img src="/images/{{song_img}}" alt="song_image">
+        </a>
+        <h3 class="name">{{song_name}}</h3>
+        <p class="name">{{artist_name}}</p>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+</section>
+
